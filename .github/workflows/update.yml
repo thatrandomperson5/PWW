@@ -4,12 +4,21 @@ on:
       - versions.txt
       
 jobs:
+  get:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.v.outputs.VERSION }}
+      
+    steps:
+      - uses: actions/checkout@v3
+      - id: v
+        run: |
+          "VERSION=$(tail -n 1 versions.txt)" >> $GITHUB_OUTPUT
   build:
+    needs: [get]
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - run: |
-          powershell -command "& {Get-Content versions.txt | Select-Object -last *n*}" >> $GITHUB_OUTPUT
       - uses: actions/setup-python@v4
         with:
           python-version: '3.11' 
