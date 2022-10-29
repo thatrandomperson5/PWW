@@ -30,4 +30,4 @@ jobs:
           python-version: '${{ needs.get.outputs.version }}' 
         
       - run: |
-          build.bat
+          cmd.exe /c "build.bat"
