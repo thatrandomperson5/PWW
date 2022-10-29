@@ -18,4 +18,4 @@ echo Archive located: %archive%
 echo Building %1
 :: pip wheel -w=\builds "\output\%archive:~0,-7%\"
 pip wheel -w="\builds" "\output\%archive%"
-del "\output\*.*"
+del /F /Q "\output\*.*"
