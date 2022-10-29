@@ -31,6 +31,19 @@ jobs:
         
       - run: |
           cmd.exe /c "build.bat"
+      - name: Archive wheels
+        uses: actions/upload-artifact@v3
+        with:
+          name: wheels
+          path: builds/
+  pull:
+    needs: [build, get]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download wheels
+        uses: actions/download-artifact@v3
+        with:
+          name: wheels
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
