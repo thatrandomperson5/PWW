@@ -8,12 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.v.outputs.VERSION }}
+      libs: ${{ steps.libs.outputs.LIBS }}
       
     steps:
       - uses: actions/checkout@v3
       - id: v
         run: |
           "VERSION=$(tail -n 1 versions.txt)" >> $GITHUB_OUTPUT
+      - id: libs
+        run: |
+          "LIBS=$(cat pkgs.txt)" >> $GITHUB_OUTPUT
   build:
     needs: [get]
     runs-on: windows-latest
