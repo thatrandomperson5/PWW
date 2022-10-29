@@ -15,9 +15,9 @@ jobs:
       - id: v
         run: |
           echo "VERSION=$(tail -n 1 versions.txt)" >> $GITHUB_OUTPUT
-      - id: libs
-        run: |
-          echo "LIBS=$(cat pkgs.txt)" >> $GITHUB_OUTPUT
+      #- id: libs
+      #  run: |
+      #    echo "LIBS=$(cat pkgs.txt)" >> $GITHUB_OUTPUT
   build:
     needs: [get]
     runs-on: windows-latest
@@ -28,7 +28,7 @@ jobs:
           python-version: '${{ needs.get.outputs.version }}' 
         
       - run: |
-          for /f "delims=" %%A in ("${{ needs.get.outputs.libs }}") do (
+          for /f "delims=" %%A in (pkgs.txt) do (
           pip download %%A -d "/output" --no-deps --no-binary :all:
           pip wheel -w /builds /output/ 
           )
