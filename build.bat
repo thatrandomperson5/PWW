@@ -12,4 +12,5 @@ tar xvfz "/output/%archive%"
 del "/output/%archive%"
 echo Building %%A
 pip wheel -w /builds "/output/%archive:0,-7%/"
+del "/output/*.*"
 )
