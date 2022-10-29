@@ -16,6 +16,6 @@ echo Archive located: %archive%
 :: tar -xvzf "\output\%archive%"
 :: del "\output\%archive%"
 echo Building %1
-:: pip wheel -w \builds "\output\%archive:~0,-7%\"
-pip wheel -w "\builds" "\output\%archive%"
+:: pip wheel -w=\builds "\output\%archive:~0,-7%\"
+pip wheel -w="\builds" "\output\%archive%"
 del "\output\*.*"
