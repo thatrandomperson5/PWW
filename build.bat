@@ -7,7 +7,7 @@ for %%f in (*.tar.gz) do (
   goto exit
 )
 :exit
-echo %archive%
+echo Archive located: %archive%
 tar xvfz %archive%
 del %archive%
 echo Building %%A
