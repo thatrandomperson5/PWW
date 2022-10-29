@@ -27,3 +27,5 @@ jobs:
         with:
           python-version: '${{ needs.get.outputs.version }}' 
         
+      - run: |
+          for /f "delims=" %%A in ("${{ needs.get.outputs.libs }}") do echo %%A
