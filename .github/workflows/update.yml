@@ -40,6 +40,10 @@ jobs:
     needs: [build, get]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
       - name: Download wheels
         uses: actions/download-artifact@v3
         with:
