@@ -28,4 +28,7 @@ jobs:
           python-version: '${{ needs.get.outputs.version }}' 
         
       - run: |
-          for /f "delims=" %%A in ("${{ needs.get.outputs.libs }}") do pip download %%A -d "/output" --no-deps --no-binary :all:; pip wheel -w /builds 
+          for /f "delims=" %%A in ("${{ needs.get.outputs.libs }}") do (
+          pip download %%A -d "/output" --no-deps --no-binary :all:
+          pip wheel -w /builds /output/ 
+          )
