@@ -2,7 +2,7 @@
 for /f "delims=" %%A in (pkgs.txt) do (
 echo Downloading %%A
 pip download %%A -d "/output" --no-deps --no-binary :all:
-for %%f in (*.tar.gz) do (
+for %%f in (/output/*.tar.gz) do (
   set archive=%%f
   goto exit
 )
