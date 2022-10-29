@@ -11,5 +11,5 @@ echo Archive located: %archive%
 tar xvfz "/output/%archive%"
 del "/output/%archive%"
 echo Building %%A
-pip wheel -w /builds /output/ 
+pip wheel -w /builds "/output/%archive:0,-7%/"
 )
