@@ -30,7 +30,4 @@ jobs:
           python-version: '${{ needs.get.outputs.version }}' 
         
       - run: |
-          for /f "delims=" %%A in (pkgs.txt) do (
-          pip download %%A -d "/output" --no-deps --no-binary :all:
-          pip wheel -w /builds /output/ 
-          )
+          build.bat
