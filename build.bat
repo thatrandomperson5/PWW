@@ -8,8 +8,8 @@ for %%f in (/output/*.tar.gz) do (
 )
 :exit
 echo Archive located: %archive%
-tar xvfz %archive%
-del %archive%
+tar xvfz "/output/%archive%"
+del "/output/%archive%"
 echo Building %%A
 pip wheel -w /builds /output/ 
 )
