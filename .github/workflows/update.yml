@@ -31,3 +31,10 @@ jobs:
         
       - run: |
           cmd.exe /c "build.bat"
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: Build wheels
+          title: Built wheels
+          body: Wheel build sucessful
+          branch: wheels
