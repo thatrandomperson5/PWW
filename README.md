@@ -15,4 +15,4 @@ Python Windows Wheels
 ## multidict
 * [Cpython 3.11 libv-6.0.2](https://github.com/thatrandomperson5/PWW/raw/main/builds/multidict-6.0.2-cp311-cp311-win_amd64.whl)
 ## yarl
-* [Cpytyon 3.11 libv-1.8.1](https://github.com/thatrandomperson5/PWW/raw/main/builds/yarl-1.8.1-cp311-cp311-win_amd64.whl)
+* [Cpython 3.11 libv-1.8.1](https://github.com/thatrandomperson5/PWW/raw/main/builds/yarl-1.8.1-cp311-cp311-win_amd64.whl)
