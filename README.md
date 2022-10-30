@@ -7,6 +7,14 @@ Python Windows Wheels
 * [multidict](https://github.com/aio-libs/multidict)
 * [yarl](https://github.com/aio-libs/yarl/)
 
+# Installers
+## Aiohttp
+Get the latest from releases and then run below in cmd:
+```batch
+tar -xzvf aiohttp-installer.tar.gz
+cd aiohttp-installer
+pip install -r requirements.txt
+```
 
 # Packages
 <!-- Automation line a81dad5e-102b-4207-9b48-1cc90fee7655-->
