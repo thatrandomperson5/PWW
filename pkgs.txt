@@ -1,3 +1,4 @@
 multidict
 yarl
 frozenlist
+idna
