@@ -1,4 +1,4 @@
-@echo off
+@echo on
 setlocal enabledelayedexpansion
 
 for /f "delims=" %%A in (pkgs.txt) do (
