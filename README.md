@@ -2,6 +2,11 @@
 Python Windows Wheels
 
 ## Supported packages
+### Deps for aiohttp
+* [frozenlist](https://github.com/aio-libs/frozenlist)
+* [multidict](https://github.com/aio-libs/multidict)
+* [yarl](https://github.com/aio-libs/yarl/)
+
 
 # Packages
 <!-- Automation line -->
