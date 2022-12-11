@@ -5,6 +5,16 @@ Python Windows Wheels
 
 ## Contents
 <!-- AutoContentStart -->
+- [Contents](#contents)
+- [Supported packages](#supported-packages)
+    * [Deps for aiohttp](#deps-for-aiohttp)
+- [Installers](#installers)
+    * [Aiohttp](#aiohttp)
+- [Packages](#packages)
+    * [frozenlist](#frozenlist)
+    * [multidict](#multidict)
+    * [yarl](#yarl)
+
 <!-- AutoContentEnd -->
 
 ## Supported packages
